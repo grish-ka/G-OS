@@ -90,7 +90,7 @@ main:
     call disk_read
 
     ; print hello world message
-    mov si, msg_hello
+    mov si, msg_welcome
     call puts
 
     cli                         ; disable interrupts, this way CPU can't get out of "halt" state
@@ -223,7 +223,8 @@ disk_reset:
     ret
 
 
-msg_hello:              db 'HELLO GOVE', ENDL, 0
+msg_welcome:              db 'Welcome to G-OS!', ENDL, 0
+msg_hello:              db 'Hello', ENDL, 0
 msg_read_failed:        db 'Read from disk failed!', ENDL, 0
 
 times 510-($-$$) db 0
