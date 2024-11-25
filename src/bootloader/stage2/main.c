@@ -3,6 +3,7 @@
 
 void _cdecl cstart_(uint16_t bootDrive)
 {
-    puts("Hello world from C!\r\n");
+    puts("HELO GOVENER\r\n");
+    puts("WELCOME TO G-OS\r\n");
     for (;;);
 }
