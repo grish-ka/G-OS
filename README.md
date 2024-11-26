@@ -26,10 +26,11 @@ STEPS TO BUILD(Note that you only have to run make in /G-OS)
 1. ```bash 
     $ sudo apt install mtools
     ```
+2. ``nasm``
 
-2. Go to the [open watcom current build](https://github.com/open-watcom/open-watcom-v2/releases/tag/Current-build) and install it(linux 64).
+3. Go to the [open watcom current build](https://github.com/open-watcom/open-watcom-v2/releases/tag/Current-build) and install it(linux 64).
 
-3. run 
+4. run 
     ```bash
     $ make
     ```
