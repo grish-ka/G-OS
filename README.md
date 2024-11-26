@@ -28,7 +28,7 @@ STEPS TO BUILD(Note that you only have to run make in /G-OS)
     ```
 2. ``nasm``
 
-3. Go to the [open watcom current build](https://github.com/open-watcom/open-watcom-v2/releases/tag/Current-build) and install it(linux 64).
+3. Go to the [open watcom current build](https://github.com/open-watcom/open-watcom-v2/releases/tag/Current-build) and install it(linux 64). ONLY IF V1.2.0R or ERALYER
 
 4. run 
     ```bash
