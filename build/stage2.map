@@ -1,8 +1,8 @@
 Open Watcom Linker Version 2.0 beta Nov 24 2024 02:30:14 (32-bit)
 Copyright (c) 2002-2024 The Open Watcom Contributors. All Rights Reserved.
 Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
-Created on:       25/02/10 17:43:29
-Executable Image: /home/grishkka/prj/nanobyte_os/build/stage2.bin
+Created on:       25/02/10 17:50:01
+Executable Image: /home/grishkka/prj/G-OS/build/stage2.bin
 creating a RAW Binary Image executable
 
 
@@ -13,7 +13,7 @@ creating a RAW Binary Image executable
 Group                           Address              Size
 =====                           =======              ====
 
-DGROUP                          0000009e             00000012
+DGROUP                          0000009e             00000010
 
 
 
@@ -26,9 +26,9 @@ Segment                Class          Group          Address         Size
 
 _ENTRY                 CODE           AUTO           00000000        00000013
 _TEXT                  CODE           AUTO           00000013        0000008b
-CONST                  DATA           DGROUP         0000009e        00000011
-CONST2                 DATA           DGROUP         000000b0        00000000
-_DATA                  DATA           DGROUP         000000b0        00000000
+CONST                  DATA           DGROUP         0000009e        00000010
+CONST2                 DATA           DGROUP         000000ae        00000000
+_DATA                  DATA           DGROUP         000000ae        00000000
 
 
                         +----------------+
@@ -41,13 +41,13 @@ _DATA                  DATA           DGROUP         000000b0        00000000
 Address        Symbol
 =======        ======
 
-Module: /home/grishkka/prj/nanobyte_os/build/stage2/asm/main.obj(main.asm)
+Module: /home/grishkka/prj/G-OS/build/stage2/asm/main.obj(main.asm)
 00000000       entry
-Module: /home/grishkka/prj/nanobyte_os/build/stage2/asm/x86.obj(x86.asm)
+Module: /home/grishkka/prj/G-OS/build/stage2/asm/x86.obj(x86.asm)
 00000013       _x86_Video_WriteCharTeletype
-Module: /home/grishkka/prj/nanobyte_os/build/stage2/c/main.obj(main)
+Module: /home/grishkka/prj/G-OS/build/stage2/c/main.obj(main)
 00000026       _cstart_
-Module: /home/grishkka/prj/nanobyte_os/build/stage2/c/stdio.obj(stdio)
+Module: /home/grishkka/prj/G-OS/build/stage2/c/stdio.obj(stdio)
 00000040+      putc_
 00000067       puts_
 
@@ -65,13 +65,13 @@ Module          Segment               Class           Address         Size
 main.asm        _ENTRY                CODE           00000000         00000013
 x86.asm         _TEXT                 CODE           00000013         00000013
 main            _TEXT                 CODE           00000026         0000001a
-                CONST                 DATA           0000009e         00000011
-                CONST2                DATA           000000b0         00000000
-                _DATA                 DATA           000000b0         00000000
+                CONST                 DATA           0000009e         00000010
+                CONST2                DATA           000000ae         00000000
+                _DATA                 DATA           000000ae         00000000
 stdio           _TEXT                 CODE           00000040         0000005e
-                CONST                 DATA           000000b0         00000000
-                CONST2                DATA           000000b0         00000000
-                _DATA                 DATA           000000b0         00000000
+                CONST                 DATA           000000ae         00000000
+                CONST2                DATA           000000ae         00000000
+                _DATA                 DATA           000000ae         00000000
 Warning! W1014: stack segment not found
 
 
@@ -80,6 +80,6 @@ Warning! W1014: stack segment not found
                         +-----------------------+
 
 Stack size:  0200 (512.)
-Memory size:  00b0 (176.)
+Memory size:  00ae (174.)
 Entry point address: 00000000
 Link time: 00:00.00
