@@ -149,7 +149,9 @@ def create_partition_table(target: str, align_start: int):
 
 
 def mount_fs(image: str, mount_dir: str):
-    sh.guestmount(mount_dir, add=image, mount='/dev/sda1')
+    # sh.guestmount(mount_dir, add=image, mount='/dev/sda1')
+    import os
+    os.system(f'sudo /usr/bin/guestmount {mount_dir} --add={image} --mount=/dev/sda')
 
 def unmount_fs(mount_dir: str):
     time.sleep(3)
@@ -219,7 +221,7 @@ def build_disk(image, stage1, stage2, kernel, files, env):
             unmount_fs(tempdir)
         except:
             pass
-        os.rmdir(tempdir)
+        os.system(f'sudo rm -rf {tempdir}')
 
 
 def build_image(target, source, env):
